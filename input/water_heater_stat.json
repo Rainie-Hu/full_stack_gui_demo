@@ -1,0 +1,18 @@
+{
+    "Water Heater Stat":{
+    "table_param":{
+    "columns":[
+                "State",
+                "CapacityAvg",
+                "BTURatingAvg",
+                "TemperatureSettingAvg",
+                "TemperatureSettingInputCount",
+                "TemperatureSettingNoInputCount"
+    ],
+    "width": 130,
+    "minwidth": 15,
+    "anchor": "center",
+    "rows":[]
+  }
+}
+}

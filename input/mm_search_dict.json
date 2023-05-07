@@ -1,0 +1,31 @@
+{
+  "menu_labels": {
+  "String Input": "air"
+},
+  "menu_buttons_config": {
+   "search": {
+     "button": {
+       "text": "Search",
+       "bg": "blue",
+       "fg": "white",
+       "width": 10,
+       "height": 5
+     },
+     "grid": {
+        "column": 5,
+        "row": 10,
+        "sticky":  "SE"}
+   }
+  },
+  "MM Search table": {
+    "table_param":{
+    "columns":[
+        "Manufacturer", "Model"
+    ],
+    "width": 100,
+    "minwidth": 10,
+    "anchor": "center",
+    "rows":[]
+  }
+}
+}

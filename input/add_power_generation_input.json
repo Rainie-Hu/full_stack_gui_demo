@@ -1,0 +1,51 @@
+{
+  "title": "Add Power Generation",
+  "title2":"Please provide power generation details.",
+  "custom_labels": [],
+  "header_inputs": {
+  "email address": "lsai3@gatech.edu",
+  "postal code": "85286"
+  },
+  "type_dropdown": {
+  	"dropdown_list" : ["Solar-electric", "Wind"],
+  	"label_name" : "Type"
+  },
+  "monthly_kWh_textbox": {
+    "Monthly kWh": ""
+  },
+  "storage_kWh_textbox": {
+    "Storage kWh": ""
+  },
+
+  "temp_button_params": {
+   "skip": {
+     "button": {
+       "text": "Skip",
+       "bg": "blue",
+       "fg": "white",
+       "width": 10,
+       "height": 5
+     },
+     "grid": {
+        "column": 5,
+        "row": 9,
+        "sticky":  "SE"}
+     }
+  },
+
+  "perm_button_params": {
+   "add": {
+     "button": {
+       "text": "Add",
+       "bg": "blue",
+       "fg": "white",
+       "width": 10,
+       "height": 5
+     },
+     "grid": {
+        "column": 5,
+        "row": 10,
+        "sticky":  "SE"}
+     }
+  }
+}

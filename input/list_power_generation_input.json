@@ -1,0 +1,33 @@
+{
+   "title":"List Power Generation",
+   "title2":"You have added these to your house hold:",
+   "table":{
+      "columns":[
+         "Num #",
+         "Type",
+         "Monthly kWh",
+         "Battery kWh"
+      ],
+      "sampleData":[
+         ["1", "Solar-electric", "300", "x"],
+         ["2", "Solar-electric", "200", "35"],
+         ["3", "Wind", "500", "78"]
+      ]
+   },
+   "hyperlink":"+ Add more power",
+   "perm_button_params": {
+   "next": {
+     "button": {
+       "text": "Next",
+       "bg": "blue",
+       "fg": "white",
+       "width": 10,
+       "height": 5
+     },
+     "grid": {
+        "column": 5,
+        "row": 10,
+        "sticky":  "SE"}
+     }
+  }
+}

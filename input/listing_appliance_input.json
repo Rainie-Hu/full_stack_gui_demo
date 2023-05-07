@@ -1,0 +1,36 @@
+{
+   "title":"Appliances",
+   "title2":"You have added the following appliances to your household:",
+   "table":{
+      "columns":[
+         "Appliance #",
+         "Type",
+         "Manufacturer",
+         "Model",
+         "Delete"
+      ],
+      "sampleData":[
+         ["1", "Water Heater", "Manufacturer 1", "Model 1"],
+         ["2", "Air Handler", "Manufacturer 2", "Model 2"],
+         ["3", "Water Heater", "Manufacturer 3", "Model 3"],
+         ["4", "Air Handler", "Manufacturer 1", "Model 4"],
+         ["5", "Heat Pump", "Manufacturer 2", "Model 5"]
+      ]
+   },
+   "hyperlink":"+ Add Another appliances",
+   "perm_button_params": {
+   "next": {
+     "button": {
+       "text": "Next",
+       "bg": "blue",
+       "fg": "white",
+       "width": 10,
+       "height": 5
+     },
+     "grid": {
+        "column": 5,
+        "row": 10,
+        "sticky":  "SE"}
+     }
+  }
+}

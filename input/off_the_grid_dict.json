@@ -1,0 +1,35 @@
+{
+    "Power generation type percentage table":{
+    "table_param":{
+    "columns":[
+        "power type", "percentage"
+    ],
+    "width": 100,
+    "minwidth": 10,
+    "anchor": "center", 
+    "rows":[["solar-electric","52%"],["wind","31%"],["mixed","17%"]]
+  }
+},
+"Water heater gallon capacity on-grid vs off-grid":{
+  "table_param":{
+  "columns":[
+      "on/off", "value"
+  ],
+  "width": 100,
+  "minwidth": 10,
+  "anchor": "center", 
+  "rows":[["on-the-grid","1234.1"],["off-the-grid","312.6"]]
+}
+},
+"Minimum avg and maximum BTU rating for off-grid":{
+  "table_param":{
+  "columns":[
+      "statistic", "value"
+  ],
+  "width": 100,
+  "minwidth": 10,
+  "anchor": "center", 
+  "rows":[["mininum","21"],["average","54"],["maximum","98"]]
+}
+}
+}

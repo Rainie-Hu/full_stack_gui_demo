@@ -1,0 +1,38 @@
+{
+  "title": "Household Form",
+  "custom_labels": [],
+  "header_inputs": {
+  "email address": "felix@gatech.edu",
+  "postal code": "71937"
+  },
+  "type_dropdown": {
+  	"dropdown_list" : ["House", "Apartment", "Townhome", "Condominium", "Mobile home"],
+  	"label_name" : "household type"
+  },
+  "middle_checkboxes": {
+    "cooling": 0,
+    "heating": 0
+  },
+  "middle_inputs": {
+    "squarefootage_inputs": "33"
+  },
+  "bottom_checkboxes": {
+  	"label" : "public utilities",
+    "checkbox_list" : ["electric", "gas", "steam", "fuel oil"]
+  },
+  "perm_button_params": {
+   "next": {
+     "button": {
+       "text": "Next",
+       "bg": "blue",
+       "fg": "white",
+       "width": 10,
+       "height": 5
+     },
+     "grid": {
+        "column": 5,
+        "row": 10,
+        "sticky":  "SE"}
+     }
+  }
+}

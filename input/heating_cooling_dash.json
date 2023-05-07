@@ -1,0 +1,23 @@
+{
+    "Heating Cooling Method Details":{
+    "table_param":{
+    "columns":[
+        "HouseholdType",
+        "AirConditionerCount",
+        "AirconditionerAvgBTU",
+        "AirconditionerEERAvg",
+        "HeaterCount",
+        "HeaterAvgBTU",
+        "HeaterCommonEnergySource",
+        "HeatpumpCount",
+        "HeatpumpAvgBTU",
+        "HeatpumpSEERAvg",
+        "HeatpumpHSPFAvg"
+    ],
+    "width": 120,
+    "minwidth": 15,
+    "anchor": "center",
+    "rows":[]
+  }
+}
+}

@@ -1,0 +1,81 @@
+{
+   "title":"Add appliance",
+   "title2":"Please provide the details for the appliance.",
+   "type_dropdown":{
+      "dropdown_list":[
+         "Air handler",
+         "Water heater"
+      ],
+      "label_name":"Appliance type: "
+   },
+   "manufacturer_dropdown":{
+      "dropdown_list":[
+         "ToBeFetched"
+      ],
+      "label_name":"Manufacturer: "
+   },
+   "model_name":{
+      "label_name":"Model name: "
+   },
+   "airHandler":{
+      "label_name":"Air handler",
+      "middle_checkboxes":{
+         "Heater":0,
+         "Air conditioner":0,
+         "Heat pump":0
+      },
+      "energyEfficiencyRatio":{
+         "label_name":"Energy efficiency ratio: "
+      },
+      "hspf":{
+         "label_name":"hspf: "
+      },
+      "seer":{
+         "label_name":"seer: "
+      },
+      "energySource_dropdown":{
+         "dropdown_list":[
+            "Electric",
+            "gas",
+            "fueloil"
+         ],
+         "label_name":"Energy source: "
+      }
+   },
+   "waterHeater":{
+      "label_name":"Water heater",
+      "capacity":{
+         "label_name":"Capacity (gallons)"
+      },
+      "type_dropdown":{
+         "dropdown_list":[
+            "Electric",
+            "gas",
+            "thermosolar",
+            "heat pump"
+         ],
+         "label_name":"Energy source: "
+      },
+      "btuRating":{
+         "label_name":"BTU rating"
+      },
+      "temperature":{
+         "label_name":"Temperature"
+      }
+   },
+   "perm_button_params": {
+   "next": {
+     "button": {
+       "text": "Next",
+       "bg": "blue",
+       "fg": "white",
+       "width": 10,
+       "height": 5
+     },
+     "grid": {
+        "column": 5,
+        "row": 10,
+        "sticky":  "SE"}
+     }
+  }
+}

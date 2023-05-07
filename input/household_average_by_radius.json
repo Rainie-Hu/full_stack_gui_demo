@@ -1,0 +1,55 @@
+{
+    "title":"Household Average by Radius",
+    "title2":"Please provide the search parameters.",
+    "search_radius dropdown":{
+       "dropdown_list":[
+          "0",
+          "5",
+          "10",
+          "25",
+          "50",
+          "100",
+          "250"
+       ],
+       "label_name":"Search Radius: "
+    },
+    "postal_code":{
+        "label_name":"Postal Code (5 digits): "
+     },
+     "housdhold_average table":{
+        "table_param":{
+        "columns":[
+            "statistics", "value"
+        ],
+        "width": 250,
+        "minwidth": 10,
+        "anchor": "center", 
+        "rows":[["household count","10"],["square footage average","121"],["heating temperature average","60.7"]
+        ,["cooling temperature average","50.2"],["public utilities used","electric, gas, steam, fuel oil"],["off-the-grid homes","3"]
+        ,["houses with power generation count","4"],["most common generation method","solar-electric"]
+        ,["monthly power generation average","2394"],["household with battery storage count","2"]
+        ,["household type count - House","4"]
+        ,["household type count - apartment","2"]
+        ,["household type count - townhome","1"]
+        ,["household type count - condominium","2"]
+        ,["household type count - mobile home","1"]
+    ]
+      }
+    },
+    "menu_buttons_config": {
+        "submit": {
+          "button": {
+            "text": "Submit",
+            "bg": "blue",
+            "fg": "white",
+            "width": 10,
+            "height": 5
+          },
+          "grid": {
+             "column": 2,
+             "row": 2,
+             "sticky":  "SE"}
+          }
+       },
+       "query_list":["WITH selectedpostalcoordinates AS (SELECT latitude, longitude FROM postalcode WHERE postalcode = {}), postalcodeswithradius AS (SELECT postalcode, 3959 * 2 * Asin(Sqrt(Power(Sin(( Radians(latitude) - Radians((SELECT latitude FROM selectedpostalcoordinates )) ) / 2), 2) + Cos( Radians((SELECT latitude FROM selectedpostalcoordinates)) ) * Cos(Radians(latitude)) * Power(Sin(( Radians( longitude ) - Radians ((SELECT longitude FROM selectedpostalcoordinates)) ) / 2), 2))) AS radius FROM postalcode) SELECT Count(h.emailid) AS householdCount, Sum(CASE WHEN h.householdtype = 'House' THEN 1 ELSE 0 END) AS houseCount, Sum(CASE WHEN h.householdtype = 'Apartment' THEN 1 ELSE 0 END) AS apartmentCount, Sum(CASE WHEN h.householdtype = 'Townhome' THEN 1 ELSE 0 END) AS townhomeCount, Sum(CASE WHEN h.householdtype = 'Condominium' THEN 0 END) AS condominiumCount, Sum(CASE WHEN h.householdtype = 'Mobile Home' THEN 1 ELSE 0 END) AS mobileHomeCount, Round(Avg(h.squarefootage), 0) AS avgSquareFootage, Round(Avg(h.regularcoolingthermostatsetting), 1) AS avgCoolingTemperature , Round(Avg(h.regularheatingthermostatsetting), 1) AS avgHeatingTemperature, (SELECT GROUP_CONCAT(DISTINCT SUBSTRING_INDEX(SUBSTRING_INDEX(u.publicutilities, ',', n.digit+1), ',', -1)) AS all_values FROM household h LEFT JOIN postalcodeswithradius p ON h.postalcode = p.postalcode LEFT JOIN householdpublicutilities u ON h.emailid = u.emailid CROSS JOIN ( SELECT 0 AS digit UNION ALL SELECT 1 UNION ALL SELECT 2 UNION ALL SELECT 3 UNION ALL SELECT 4 UNION ALL SELECT 5 UNION ALL SELECT 6 UNION ALL SELECT 7 UNION ALL SELECT 8 UNION ALL SELECT 9 ) AS n WHERE p.radius <= {} HAVING all_values IS NOT NULL) AS publicUtilities, Sum(CASE WHEN publicutilities = 'off-the-grid' THEN 1 ELSE 0 END) AS offTheGridCount, Count(DISTINCT g.emailid) AS homesWithPowerGenerationCount, Round(Avg(g.avgmonthlykwhr), 0) AS avgMonthlyKwh, Count(DISTINCT CASE WHEN g.storagecapacity = 0 THEN g.emailid ELSE NULL END) AS householdWithBateryStorageCount, (select tmp.generatorType from (select generatorType, count(*) as count FROM household h LEFT JOIN postalcodeswithradius p ON h.postalcode = p.postalcode LEFT JOIN householdpublicutilities u ON h.emailid = u.emailid LEFT JOIN powergeneration g ON g.emailid = h.emailid WHERE p.radius <= {} group by g.generatorType order by count limit 1) as tmp) as mostcommongeneratortype FROM household h LEFT JOIN postalcodeswithradius p ON h.postalcode = p.postalcode LEFT JOIN householdpublicutilities u ON h.emailid = u.emailid LEFT JOIN powergeneration g ON g.emailid = h.emailid WHERE p.radius <= {};"]
+ }

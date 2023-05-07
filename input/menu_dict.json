@@ -1,0 +1,44 @@
+{
+  "title": "Alternakraft - Team055",
+  "custom_labels": [],
+  "menu_checkboxes": {
+    "cooling": 0,
+    "heating": 0
+  },
+  "menu_labels": {
+  "name": "Suraj",
+   "gender": "Male"
+},
+  "perm_button_params": {
+   "next": {
+     "button": {
+       "text": "Next",
+       "bg": "blue",
+       "fg": "white",
+       "width": 10,
+       "height": 5
+     },
+     "grid": {
+        "column": 5,
+        "row": 10,
+        "sticky":  "SE"}
+   },
+   "previous": {
+     "button": {
+       "text": "Previous",
+       "bg": "blue",
+       "fg": "white",
+       "width": 10,
+       "height": 5
+     },
+     "grid": {
+        "column": 0,
+        "row": 10,
+        "sticky":  "SW"}
+   }
+  },
+  "menu_buttons_config": {
+
+  },
+  "custom_entries": []
+}

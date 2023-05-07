@@ -1,0 +1,20 @@
+{
+  "title": "Submission complete!",
+  "text": "Thank you for providing your information to Alternakraft!",
+  "perm_button_params": {
+    "return": {
+      "button": {
+        "text": "Return to the main menu",
+        "bg": "blue",
+        "fg": "white",
+        "width": 10,
+        "height": 5
+      },
+    "grid": {
+      "column": 1,
+      "row": 10,
+      "sticky": "W"
+    }
+  }
+}
+}

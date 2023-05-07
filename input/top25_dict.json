@@ -1,0 +1,39 @@
+{
+    "title": "Top 25 Popular Manufacturer",
+    "menu_buttons_config": {
+          "M1": {
+     "button": {
+       "text": "M1",
+       "bg": "blue",
+       "fg": "white",
+       "width": 10,
+       "height": 5
+     },
+     "pack": {
+        "side": "bottom",
+        "padx": 15,
+        "pady": 20}
+   }
+      },
+    "Top 25 popular manufacturer table":{
+    "table_param":{
+    "columns":[
+        "Manufacturer", "Count of appliance"
+    ],
+    "width": 200,
+    "minwidth": 50,
+    "anchor": "center",
+    "rows":[["M1","220"],["M3","200"],["M5","170"]]
+  }
+},
+    "drilldown_title": "M1",
+    "drilldown table":{
+      "table_param":{
+      "columns":[
+        "Appliance Type", "Count of appliance"],
+      "width": 100,
+      "minwidth": 10,
+      "anchor": "center",
+      "rows":[]
+  }}
+}

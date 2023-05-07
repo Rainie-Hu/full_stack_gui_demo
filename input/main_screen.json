@@ -1,0 +1,34 @@
+{
+  "title": "Welcome to Alternakraft!:",
+  "menu_labels": [],
+  "menu_checkboxes": {},
+  "perm_button_params": {
+  },
+  "menu_buttons_config": {
+    "enter_household_info": {
+     "button": {
+       "text": "Enter my household info",
+       "bg": "blue",
+       "fg": "white",
+       "width": 10,
+       "height": 5
+     },
+     "pack": {
+        "side": "top"
+        }
+   },
+   "display_reports": {
+     "button": {
+       "text": "View reports / query data",
+       "bg": "blue",
+       "fg": "white",
+       "width": 10,
+       "height": 5
+     },
+     "pack": {
+        "side": "top"
+       }
+   }
+  },
+  "custom_entries": []
+}

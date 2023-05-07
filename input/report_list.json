@@ -1,0 +1,82 @@
+{
+  "title": "Report List:",
+  "menu_labels": [],
+  "menu_checkboxes": {},
+  "perm_button_params": {
+  },
+  "menu_buttons_config": {
+   "heating_cooling_method_details": {
+     "button": {
+       "text": "Heating/cooling method details",
+       "bg": "blue",
+       "fg": "white",
+       "width": 10,
+       "height": 5
+     },
+     "pack": {
+        "side": "top"
+       }
+   },
+    "water_heater_stats": {
+     "button": {
+       "text": "Water heater statistics by state",
+       "bg": "blue",
+       "fg": "white",
+       "width": 10,
+       "height": 5
+     },
+     "pack": {
+        "side": "top"
+       }
+   },
+        "household_averages_by_radius": {
+     "button": {
+       "text": "Household Averages by Radius",
+       "bg": "blue",
+       "fg": "white",
+       "width": 10,
+       "height": 5
+     },
+     "pack": {
+        "side": "top"
+       }
+   },
+        "off_the_grid": {
+     "button": {
+       "text": "Off the Grid Dashboard",
+       "bg": "blue",
+       "fg": "white",
+       "width": 10,
+       "height": 5
+     },
+     "pack": {
+        "side": "top"
+       }
+   },
+        "mm_search": {
+     "button": {
+       "text": "Manufacturer/Model Search",
+       "bg": "blue",
+       "fg": "white",
+       "width": 10,
+       "height": 5
+     },
+     "pack": {
+        "side": "top"
+       }
+   },
+        "top25_popular_manufacturers": {
+     "button": {
+       "text": "Top 25 Popular Manufacturers",
+       "bg": "blue",
+       "fg": "white",
+       "width": 10,
+       "height": 5
+     },
+     "pack": {
+        "side": "top"
+       }
+   }
+  },
+  "custom_entries": []
+}
